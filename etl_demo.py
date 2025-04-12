@@ -70,7 +70,7 @@ def get_cities_data() -> pd.DataFrame:
     
 def get_city_weather(city_name:str) -> dict:
     api_key = os.getenv("WEATHER_KEY")
-    city_name = "Yangon"
+    city_name="Yangon"
     weather_api = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric"
     try:
         weather_json = extract_json_from_url(weather_api)
